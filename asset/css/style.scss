@@ -1,0 +1,547 @@
+/*========================
+
+Template name naturo HTML5
+
+
+Aothor name: .........
+Author URL:.......
+Version
+
+==========Template content for Index=========
+
+1. boday basic pramiter
+2.header aria design
+*/
+
+/*================body-basic paramiter==================*/
+$body-font:'Farro',
+sans-serif;
+;
+
+@mixin small-device {
+    @media(min-width:320px) and (max-width:575px) {
+        @content
+    }
+}
+
+;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+$prymari-color:#9f974f;
+
+
+
+body {
+    $body-font: $body-font;
+    color: #686242;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/*================1.body-basic paramiter==================*/
+
+/*================2.2.header aria design==================*/
+
+
+
+header {
+
+    .header-top {
+        background: $prymari-color;
+
+
+        .left {
+            ul {
+                li {
+                    display: inline-block;
+                    position: relative;
+
+                    &:last-child {
+                        a {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+
+                    a {
+                        display: inline-block;
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: #fff;
+                        margin-right: 30px;
+
+                        i {
+                            margin-right: 8px;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            right: 10px;
+                            top: 10px;
+                            background: #686242;
+                            height: 20px;
+                            width: 1px;
+                        }
+                    }
+
+
+
+
+                }
+
+            }
+        }
+
+        .right {
+            text-align: right;
+
+            .global {
+                font-size: 12px;
+                color: #fff;
+                margin-right: 10px;
+            }
+
+            .down-select {
+                margin-right: 30px;
+                background: transparent;
+                border: 0;
+                color: #fff;
+                font-size: 12px;
+            }
+
+            .icon {
+                display: inline-block;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        display: inline-block;
+
+                        i {
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            text-align: center;
+                            background: #867f44;
+                            font-size: 14px;
+                            line-height: 40px;
+                            color: #fff;
+                            transition: .4s;
+
+                            &:hover {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+    .main-nav {
+
+        ul {
+            li {
+                display: inline-block;
+                position: relative;
+                &:hover .drop-down {
+                    opacity: 1;
+                    visibility: visible;
+                    top: 70px;
+                    
+                }
+                
+                a {
+                    display: inline-block;
+                    padding: 20px 20px;
+                    color: $prymari-color;
+                    font-size: 16px;
+                    
+                    &:first-child {
+                        padding-left: 0;
+                        
+                    }
+
+                   
+                    
+                    i {
+                        font-size: 12px;
+                        margin-left: 5px;
+
+                    }
+
+
+                }
+
+                .drop-down {
+                    position: absolute;
+                    left: 50%;
+                    top: 100px;
+                    transform: translateX(-50%);
+                    border-bottom: 3px solid $prymari-color;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .6s;
+
+                    li {
+                        display: inline-block;
+
+                        a {
+                            width: 115px;
+                            padding-left: 10px;
+                            color: $prymari-color;
+                            background: #e2d7d7;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 51%;
+            transform: translateX(-50%);
+        }
+        }
+
+        .mobilelogo {
+            display: none;
+        }
+        .pdn{
+            padding-right: 0;
+        }
+        .right {
+            text-align: right;
+          
+         
+            .drop-down{
+                li{
+                    a{
+                        text-align: left;
+                       
+                    }
+                }
+            }
+        
+
+        }
+
+
+
+    }
+
+    .main-mobile-menu {
+        display: none;
+    }
+
+    @include small-device {
+        .main-mobile-menu {
+            display: block;
+        }
+
+        .header-top {
+            display: none;
+        }
+
+        .main-nav {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: flex;
+            justify-content: space-between;
+            background: #9f974f;
+
+            .logoo {
+                padding: 20px;
+            }
+
+
+
+            .bear {
+                margin-top: 25px;
+                margin-right: 25px;
+
+                i {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    padding: 0;
+                    font-size: 24px;
+                    background: #fff;
+                    color: $prymari-color;
+                    line-height: 50px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .side-ber {
+            background: rgba(0, 0, 0, .5);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            transition: .4s;
+        }
+
+        .test {
+            left: 0;
+        }
+
+        .side-ber-tow {
+            width: 70%;
+            height: 100vh;
+            background: #fff;
+            position: fixed;
+            top: 0;
+            left: -70%;
+            transition: .8s;
+
+            .beg {
+                background: $prymari-color;
+                padding: 20px;
+            }
+
+            i {
+                position: absolute;
+                right: 10px;
+                top: 30px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                padding: 0;
+                font-size: 24px;
+                background: #fff;
+                color: $prymari-color;
+                line-height: 50px;
+                text-align: center;
+            }
+
+            ul {
+                margin-left: 25px;
+
+
+                li {
+                    padding-top: 30px;
+                    position: relative;
+                    border-bottom: 1px solid #686242;
+
+                    a {
+                        display: inline-block;
+                        color: $prymari-color;
+                        font-size: 16px;
+
+                        .raw {
+                            position: absolute;
+                            left: -35px;
+                            top: 20px;
+                            font-size: 10px;
+                            background: none;
+                            transition: .4s;
+                        }
+                    }
+
+                }
+            }
+
+            .home {
+                position: relative;
+
+                .drop {
+                    display: none;
+                }
+            }
+
+            .teams {
+                position: relative;
+
+                .drop2 {
+                    display: none;
+                }
+            }
+
+            .Services {
+                position: relative;
+
+                .drop3 {
+                    display: none;
+                }
+            }
+
+            .Shops {
+                position: relative;
+
+                .drop4 {
+                    display: none;
+                }
+            }
+
+            .Pages {
+                position: relative;
+
+                .drop5 {
+                    display: none;
+                }
+            }
+
+            .Blog {
+                position: relative;
+
+                .drop6 {
+                    display: none;
+                }
+            }
+
+            .round {
+                width: 40px;
+                height: 40px;
+                background: $prymari-color;
+                border-radius: 50%;
+                line-height: 40px;
+                text-align: center;
+                left: 145px;
+                top: 18px;
+                position: absolute;
+            }
+
+            .bar1 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 13px;
+
+            }
+
+
+            .bar2 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                transform: rotate(90deg);
+            }
+
+            .bar3 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                transform: rotate(90deg);
+            }
+
+            .bar4 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                transform: rotate(90deg);
+            }
+
+            .bar5 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                transform: rotate(90deg);
+            }
+
+            .bar6 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                transform: rotate(90deg);
+            }
+
+            .bar6 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                transform: rotate(90deg);
+            }
+
+            .bar7 {
+                width: 15px;
+                height: 2px;
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right: 12px;
+                transform: rotate(90deg);
+            }
+
+
+            .cls {
+                opacity: 0;
+            }
+        }
+
+        .test2 {
+            left: 0;
+        }
+
+
+    }
+
